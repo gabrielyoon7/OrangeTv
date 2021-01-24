@@ -58,23 +58,23 @@ public class MainCart extends JPanel{
       basketTable.setBounds(0, 0, 1330, 500);
       add(basketTable);
       
-      RoundedButton payButton = new RoundedButton("°áÁ¦ÇÏ±â");
+      RoundedButton payButton = new RoundedButton("ê²°ì œí•˜ê¸°");
       payButton.setBounds(1113, 554, 160, 70);
       payButton.addActionListener(new ActionListener() {
   		@Override
   		public void actionPerformed(ActionEvent e) {
   			int leftPoint = user.point - basketTable.tableController.getSubtotal();
 			if(leftPoint < 0) {
-				JOptionPane.showMessageDialog(null, "Æ÷ÀÎÆ®°¡ ºÎÁ·ÇÕ´Ï´Ù.","°áÁ¦ Ã¢",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "í¬ì¸íŠ¸ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.","ê²°ì œ ì°½",JOptionPane.INFORMATION_MESSAGE);
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "°áÁ¦µÇ¾ú½À´Ï´Ù.","°áÁ¦ Ã¢",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ê²°ì œë˜ì—ˆìŠµë‹ˆë‹¤.","ê²°ì œ ì°½",JOptionPane.INFORMATION_MESSAGE);
 				user.setPoint(leftPoint);
-				MainMenu.mainStoreInfo.pointLabel.setText("º¸À¯ Æ÷ÀÎÆ® " + leftPoint+"Á¡");
-				MainMenu.mainMediaInfo.pointLabel.setText("º¸À¯ Æ÷ÀÎÆ® " + leftPoint+"Á¡");
-				MainMenu.privatePage.lblNewLabel_6.setText(user.getPoint()+"Á¡ ("+user.getPremium()+")");
+				MainMenu.mainStoreInfo.pointLabel.setText("ë³´ìœ  í¬ì¸íŠ¸ " + leftPoint+"ì ");
+				MainMenu.mainMediaInfo.pointLabel.setText("ë³´ìœ  í¬ì¸íŠ¸ " + leftPoint+"ì ");
+				MainMenu.privatePage.lblNewLabel_6.setText(user.getPoint()+"ì  ("+user.getPremium()+")");
 				basketTable.tableController.removeRow();
-				JOptionPane.showMessageDialog(GUIMain.mainFrame,"ÇöÀç º¸À¯ Æ÷ÀÎÆ®´Â "+user.getPoint()+" Æ÷ÀÎÆ® ÀÔ´Ï´Ù.");
+				JOptionPane.showMessageDialog(GUIMain.mainFrame,"í˜„ìž¬ ë³´ìœ  í¬ì¸íŠ¸ëŠ” "+user.getPoint()+" í¬ì¸íŠ¸ ìž…ë‹ˆë‹¤.");
 			}
   		}
   	});
@@ -82,7 +82,7 @@ public class MainCart extends JPanel{
       
    }
 
- //¹öÆ° µðÀÚÀÎ
+ //ë²„íŠ¼ ë””ìžì¸
    public class RoundedButton extends JButton {
       public RoundedButton() { super(); decorate(); } 
       public RoundedButton(String text) { super(text); decorate(); } 
@@ -93,9 +93,9 @@ public class MainCart extends JPanel{
       @Override 
       protected void paintComponent(Graphics g) {
          //Color c=new Color(255,247,242); 
-   	  Color c=new Color(249,172,25);//¹è°æ»ö °áÁ¤
-         //Color o=new Color(247,99,12); //±ÛÀÚ»ö °áÁ¤
-         Color o=new Color(255,255,255); //±ÛÀÚ»ö °áÁ¤
+   	  Color c=new Color(249,172,25);//ë°°ê²½ìƒ‰ ê²°ì •
+         //Color o=new Color(247,99,12); //ê¸€ìžìƒ‰ ê²°ì •
+         Color o=new Color(255,255,255); //ê¸€ìžìƒ‰ ê²°ì •
          int width = getWidth(); 
          int height = getHeight(); 
          Graphics2D graphics = (Graphics2D) g; 

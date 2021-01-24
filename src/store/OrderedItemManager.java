@@ -20,7 +20,7 @@ public class OrderedItemManager extends Manager implements DataEngineInterface {
 	public void setOrder(Order order) {
 		mylist = order.orderedItemList;
 	}
-	private String[] headers = {"»óÇ°¸í", "°¡°İ", "°³¼ö", "¼Ò°è"};
+	private String[] headers = {"ìƒí’ˆëª…", "ê°€ê²©", "ê°œìˆ˜", "ì†Œê³„"};
 	public String[] getColumnNames() {
 		return headers;
 	}
@@ -42,7 +42,7 @@ public class OrderedItemManager extends Manager implements DataEngineInterface {
 		List<Manageable> result = new ArrayList();
 		for (OrderedItem od: mylist)
 			result.add((Manageable) od);
-		return result;  // mylist ¸®ÅÏ ¾ÈµÊ. <OrderedItem> -> <Manageable> ºÒ°¡
+		return result;  // mylist ë¦¬í„´ ì•ˆë¨. <OrderedItem> -> <Manageable> ë¶ˆê°€
 	}
 
 	@Override

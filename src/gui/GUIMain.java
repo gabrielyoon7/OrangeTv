@@ -14,19 +14,19 @@ public class GUIMain{
     static LogIn login;
     static advertisement ad;
     public static void main(String args[]) {
-    	/* ½ÃÀÛÁöÁ¡. ÇÁ·Î±×·¥ÀÇ ÁøÇà ¹æÇâÀº ´ÙÀ½°ú °°À½
-    	 * GUIMainÅ¬·¡½ºÀÇ main    =>    LogInÅ¬·¡½º   =>    (·Î±×ÀÎ ¼º°ø½Ã) GUIMainÀÇ ±¤°í => GUIMainÀÇ startGUI
-    	 * ·Î±×ÀÎ ¼º°ø ½Ã MainÅ¬·¡½ºÀÇ ÄÜ¼Öµµ ÀÛµ¿ ½ÃÅ´.
+    	/* ì‹œì‘ì§€ì . í”„ë¡œê·¸ë¨ì˜ ì§„í–‰ ë°©í–¥ì€ ë‹¤ìŒê³¼ ê°™ìŒ
+    	 * GUIMainí´ë˜ìŠ¤ì˜ main    =>    LogIní´ë˜ìŠ¤   =>    (ë¡œê·¸ì¸ ì„±ê³µì‹œ) GUIMainì˜ ê´‘ê³  => GUIMainì˜ startGUI
+    	 * ë¡œê·¸ì¸ ì„±ê³µ ì‹œ Mainí´ë˜ìŠ¤ì˜ ì½˜ì†”ë„ ì‘ë™ ì‹œí‚´.
     	 */
-    	login = new LogIn();//·Î±×ÀÎ Å¬·¡½º ¾È¿¡¼­ ·Î±×ÀÎ ¿©ºÎ ÆÇ´Ü ÈÄ startGUI¸¦ ½ÇÇàÇÔ.
-    	main.run();//·Î±×ÀÎ ¼º°ø ½Ã ÄÜ¼Ö ÀÛµ¿
+    	login = new LogIn();//ë¡œê·¸ì¸ í´ë˜ìŠ¤ ì•ˆì—ì„œ ë¡œê·¸ì¸ ì—¬ë¶€ íŒë‹¨ í›„ startGUIë¥¼ ì‹¤í–‰í•¨.
+    	main.run();//ë¡œê·¸ì¸ ì„±ê³µ ì‹œ ì½˜ì†” ì‘ë™
     	
     }
     
     
     public static void startGUI() {
-    	// ¡Ú¡Ú¡Ú¡Ú¡Ú¡Ú(Á¢±Ù ¹æ¹ı º¯°æµÊ) LogIn Å¬·¡½º°¡ ÀÌ ¸Ş¼Òµå¸¦ È°¼ºÈ­ ½ÃÅ³ °ÍÀÓ. ¡Ú¡Ú¡Ú¡Ú¡Ú¡Ú
-    	//startGUI => createAndShowGUI => DefaultFrame ¼øÀ¸·Î ½ÇÇàµÊ.
+    	// â˜…â˜…â˜…â˜…â˜…â˜…(ì ‘ê·¼ ë°©ë²• ë³€ê²½ë¨) LogIn í´ë˜ìŠ¤ê°€ ì´ ë©”ì†Œë“œë¥¼ í™œì„±í™” ì‹œí‚¬ ê²ƒì„. â˜…â˜…â˜…â˜…â˜…â˜…
+    	//startGUI => createAndShowGUI => DefaultFrame ìˆœìœ¼ë¡œ ì‹¤í–‰ë¨.
         //Schedule a job for the event-dispatching thread:
         //creating and showing this application's GUI.
     	ad=new advertisement();
@@ -46,7 +46,7 @@ public class GUIMain{
      */
 	static JFrame mainFrame = new JFrame("OrangeTv");
     private static void createAndShowGUI() {
-    	//½ÇÇàµÈ DefaultFrame¿¡ ÀÖ´Â addComponentsToPane¸¦ ½ÇÇà½ÃÅ°¸é¼­ 4Á¾·ùÀÇ ÆĞ³ÎÀÌ ºÙÀ» ¿¹Á¤
+    	//ì‹¤í–‰ëœ DefaultFrameì— ìˆëŠ” addComponentsToPaneë¥¼ ì‹¤í–‰ì‹œí‚¤ë©´ì„œ 4ì¢…ë¥˜ì˜ íŒ¨ë„ì´ ë¶™ì„ ì˜ˆì •
         //Create and set up the window.
     	mainFrame = new JFrame("OrangeTv");
     	Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -80,7 +80,7 @@ class advertisement extends JFrame{
         setLocation(600, 350);
         setVisible(true);        // visible
     }
-    public void paint(Graphics g) {//±×¸®´Â ÇÔ¼ö
-		g.drawImage(background, 0, 0, null);//background¸¦ ±×·ÁÁÜ
+    public void paint(Graphics g) {//ê·¸ë¦¬ëŠ” í•¨ìˆ˜
+		g.drawImage(background, 0, 0, null);//backgroundë¥¼ ê·¸ë ¤ì¤Œ
     }
 }

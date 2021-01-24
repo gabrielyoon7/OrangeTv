@@ -6,7 +6,10 @@
     <file url="file://$PROJECT_DIR$/data/media.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data/test.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data/user.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/gui/GUIMain.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/gui/MainCart.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/Main.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/store/Order.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/store/OrderedItemManager.java" charset="UTF-8" />
   </component>
 </project>
